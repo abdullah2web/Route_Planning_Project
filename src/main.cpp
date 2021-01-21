@@ -55,16 +55,42 @@ int main(int argc, const char **argv)
     // TODO 1: Declare floats `start_x`, `start_y`, `end_x`, and `end_y` and get
     // user input for these values using std::cin. Pass the user input to the
     // RoutePlanner object below in place of 10, 10, 90, 90.
+    
+    // Checking for invalid input
     float start_x, start_y, end_x, end_y;
-    std::cout << "Enter point start X: ";
-    std::cin >> start_x;
-    std::cout << "Enter point start Y: ";
-    std::cin >> start_y;
-    std::cout << "Enter point end X: ";
-    std::cin >> end_x;
-    std::cout << "Enter point end Y: ";
-    std::cin >> end_y;
 
+    cout << "Enter a start_x from 0 to 100: ";
+    cin >> start_x;
+    while (!(cin) || start_x < 0 || start_x > 100) {
+        cout << "Invalid entry. Enter a start_x from 0 to 100: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cin >> start_x;
+    }
+    cout << "Enter a start_y from 0 to 100: ";
+    cin >> start_y;
+    while (!(cin) || start_y < 0 || start_y > 100) {
+        cout << "Invalid entry. Enter a start_y from 0 to 100: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cin >> start_y;
+    }
+    cout << "Enter a end_x from 0 to 100: ";
+    cin >> end_x;
+    while (!(cin) || end_x < 0 || end_x > 100) {
+        cout << "Invalid entry. Enter a end_x from 0 to 100: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cin >> end_x;
+    }
+    cout << "Enter a end_y from 0 to 100: ";
+    cin >> end_y;
+    while (!(cin) || end_y < 0 || end_y > 100) {
+        cout << "Invalid entry. Enter a end_y from 0 to 100: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cin >> end_y;
+    }
 
     // Build Model.
     RouteModel model{osm_data};
