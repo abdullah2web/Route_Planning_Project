@@ -1,5 +1,8 @@
 #include "route_model.h"
 #include <iostream>
+#include <vector>
+
+using namespace std::vector;
 
 RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
     // Create RouteModel nodes.
