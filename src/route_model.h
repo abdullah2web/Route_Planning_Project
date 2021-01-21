@@ -29,7 +29,7 @@ class RouteModel : public Model {
       private:
         int index;
         Node * FindNeighbor(std::vector<int> node_indices);
-        RouteModel * parent_model = nullptr;
+        RouteModel *parent_model = nullptr;
     };
 
     RouteModel(const std::vector<std::byte> &xml);
