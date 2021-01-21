@@ -3,12 +3,14 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <limits>
 #include <io2d.h>
 #include "route_model.h"
 #include "render.h"
 #include "route_planner.h"
 
 using namespace std::experimental;
+using namespace std;
 
 static std::optional<std::vector<std::byte>> ReadFile(const std::string &path)
 {   
@@ -58,36 +60,36 @@ int main(int argc, const char **argv)
     // Checking for invalid input
     float start_x, start_y, end_x, end_y;
 
-    cout << "Enter a start_x from 0 to 100: ";
-    cin >> start_x;
-    while (!(cin) || start_x < 0 || start_x > 100) {
-        cout << "Invalid entry. Enter a start_x from 0 to 100: ";
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    std::cout << "Enter a start_x from 0 to 100: ";
+    std::cin >> start_x;
+    while (!(std::cin) || start_x < 0 || start_x > 100) {
+        std::cout << "Invalid entry. Enter a start_x from 0 to 100: ";
+        std::cin.clear();
+        std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
         std::cin >> start_x;
     }
-    cout << "Enter a start_y from 0 to 100: ";
-    cin >> start_y;
-    while (!(cin) || start_y < 0 || start_y > 100) {
-        cout << "Invalid entry. Enter a start_y from 0 to 100: ";
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    std::cout << "Enter a start_y from 0 to 100: ";
+    std::cin >> start_y;
+    while (!(std::cin) || start_y < 0 || start_y > 100) {
+        std::cout << "Invalid entry. Enter a start_y from 0 to 100: ";
+        std::cin.clear();
+        std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
         std::cin >> start_y;
     }
-    cout << "Enter a end_x from 0 to 100: ";
-    cin >> end_x;
-    while (!(cin) || end_x < 0 || end_x > 100) {
-        cout << "Invalid entry. Enter a end_x from 0 to 100: ";
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    std::cout << "Enter a end_x from 0 to 100: ";
+    std::cin >> end_x;
+    while (!(std::cin) || end_x < 0 || end_x > 100) {
+        std::cout << "Invalid entry. Enter a end_x from 0 to 100: ";
+        std::cin.clear();
+        std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
         std::cin >> end_x;
     }
-    cout << "Enter a end_y from 0 to 100: ";
-    cin >> end_y;
-    while (!(cin) || end_y < 0 || end_y > 100) {
-        cout << "Invalid entry. Enter a end_y from 0 to 100: ";
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    std::cout << "Enter a end_y from 0 to 100: ";
+    std::cin >> end_y;
+    while (!(std::cin) || end_y < 0 || end_y > 100) {
+        std::cout << "Invalid entry. Enter a end_y from 0 to 100: ";
+        std::cin.clear();
+        std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
         std::cin >> end_y;
     }
 
