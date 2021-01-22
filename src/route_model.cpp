@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-using namespace std::vector;
+using namespace std;
 
 RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
     // Create RouteModel nodes.
