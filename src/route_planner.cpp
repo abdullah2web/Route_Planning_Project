@@ -48,6 +48,8 @@ void RoutePlanner::AStarSearch(){
             m_Model.path = ConstructFinalPath(current_node);
 
             return;
+        } else {
+              AddNeighbors(current_node);
         }
     }
 }
